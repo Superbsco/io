@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>类级别的插件</title>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script src="jquery.twoaddresult.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('#Button1').click(function() {
+				$('#Text3').val(
+					$.addNum($('#Text1').val(),$('#Text2').val())
+				);
+			}); 
+			$('#Button2').click(function() {
+				$('#Text6').val(
+					$.subNum($('#Text4').val(),$('#Text5').val())
+				);
+			}); 
+		})
+	</script>
+</head>
+<body>
+	<div>
+		类级别的插件
+	</div>
+	<div>两数相加</div>
+	<input type="text" id="Text1" name="">
+	+
+	<input type="text" id="Text2" name="">
+	=
+	<input type="text" id="Text3" name="">
+	<input type="button" id="Button1" value="等于" name="">
+	<hr />
+	<div>两数相减</div>
+	<input type="text" id="Text4" name="">
+	-
+	<input type="text" id="Text5" name="">
+	=
+	<input type="text" id="Text6" name="">
+	<input type="button" id="Button2" value="等于" name="">
+</body>
+</html>
